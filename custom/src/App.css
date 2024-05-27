@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav{
+    position:relative;
+    transition: .3s ease-in-out;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px;
+}
+.navbar .links  {
+    display: none;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+
+.navbar  .link{
+    margin: 0 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.logout-link{
+    border: 1px solid grey;
+    padding: 10px 40px;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.navbar-mobile{
+    display: flex;
+    position: absolute;
+    width:100%;
+    height: 100vh;
+    background-color: #444444;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff
+}
+
+.navbar-mobile .link{
+    margin:  10px 0;
+
+}
+
+.burger-icon {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+    top: 15px;
+    right: 15px;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 15px;
+}
+
+.content h1 {
+    font-size: 34px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+
+.form-control{
+    background-color: transparent;
+    border: 1px solid grey;
+    margin: 5px 0;
+    width: 400px;
+    padding: 10px;
+
+}
+
+
+.login-button{
+    background-color: #444444;
+    color: #fff;
+    padding: 10px 40px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+
+    .navbar {
+        margin:50px ;
+    }
+
+    .navbar .links {
+        display: flex;
+    }
+
+
+    .navbar-mobile{
+
+    display: none;
+
+    }
+
+    .burger-icon {
+        display: none!important;
+    }
+}
